@@ -1,1 +1,1 @@
-# Us_Visa_Approval_Prediction_Classification
+# USA_Visa_Approval_Prediction_Classification
