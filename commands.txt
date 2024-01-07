@@ -1,0 +1,43 @@
+1# Create public repo in git.
+    - with ignore file in python.
+    - mit license.
+
+2# On Github from code button copy https link.
+    - clone repo to project folder.
+    >> git clone http_link
+
+3# After Cloning.
+    >> cd repo_folder
+    >> code . (this will open vs code)
+
+4# Create Virtual Envt.
+    >> conda create -p venv_usa_project python==3.11
+    >> conda info --envs (to list all venv)
+
+5# Activate new virtual envt.   
+    >>conda activate venv_usa_project/
+
+6# Inorder to run jupyter notebook install ipykernel
+    >> pip install ipykernel
+
+7# To save all the packages on a file  ---> dont use this, just add mannually required additional packages.
+>> pip freeze > requirements.txt
+
+8# to intsall all the packages from text file
+>> pip install -r requirements.txt   
+
+9# Create setup.py and add "-e ." in the last line of requirements.txt
+    - setup.py file with some meta data that helps us to make our project as package ,so we can install this package using pip command and import and use and all.
+
+    - The -e . option in requirements.txt is used for editable installs, and it serves a specific purpose during development. 
+    - While requirements.txt is primarily for specifying dependencies, including the -e . flag allows you to install a package in "editable mode" during development.
+    - This means that changes you make to the source code of that package immediately take effect without the need to reinstall it. 
+    - When a package is installed in editable mode, changes to the source code immediately affect the installed package without the need to reinstall it.
+    - This is useful during development when you're actively working on a package or library,
+             and you want changes to the source code to take effect immediately without having to reinstall the package every time you make a change.
+    - setup.py will identify __init__.py location and make that folders as package, now requirements.txt's "-e ." is responsible for make the packages in editable mode.
+    
+    - The __init__.py file is a special file in a Python package directory. Its presence indicates to Python that the directory should be considered a package, 
+             and it is executed as the package's initialization code when the package is imported.
+
+    - When deploying your Python project to a new environment, you can use the pip install -r requirements.txt command to install all the necessary dependencies.
